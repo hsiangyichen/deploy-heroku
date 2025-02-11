@@ -8,6 +8,9 @@ const PORT = process.env.PORT || 5050;
 
 app.use(express.json());
 
+import cors from "cors";
+app.use(cors());
+
 app.get("/", (_req, res) => {
   res.send("Welcome to my API");
 });
